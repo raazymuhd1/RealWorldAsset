@@ -44,6 +44,7 @@ contract sTSLA is ERC20 {
 
     /* 
      * @dev User must deposit at least 200% of the value of the sTSLA they want to mint ( mint $100 worth of collateral, user must deposit $2000 worth of collateral to this contract )
+     @dev challenge - implement a real world asset price using any oracle
      */
     function depositAndmint(uint256 amountToMint) external payable {
         // Checks / Effects

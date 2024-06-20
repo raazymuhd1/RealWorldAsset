@@ -1,4 +1,4 @@
-## Real World Assets
+## Real World Assets (Stop at 23.04)
 
  **3 Traits of Real World Assets**
   - a location of real world assets ( off-chain for sure )
