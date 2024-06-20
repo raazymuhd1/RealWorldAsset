@@ -27,7 +27,8 @@ contract sTSLA is ERC20 {
     uint256 public constant DECIMALS = 8;
     uint256 public constant ADDITIONAL_FEED_PRECISION = 1e10;
     uint256 public constant PRECISION = 1e18; // precision is 1
-    // ambang batas untuk mencairkan adalah 50
+    // ambang batas collateral harus di atas 50%, di bawah 50% bisa di liquidate (di cairkan)
+    // in lending protocol someone could liquidate somebody else collateral if that person collaterals is below 50%, and depositing another collateral equal to 200% from their borrow token (borrow $100 token => deposit $200 worth of collateral asset (ETH, USDT, etc))
     uint256 private constant LIQUIDATION_THRESHOLD = 50; // This means you need to be 200% over-collateralized from the minted amount or borrowed amount in lending protocol (mint $100 token = collateral token must be $2000 (200% from $100 worth of minted token))
     uint256 private constant LIQUIDATION_BONUS = 10; // This means you get assets at a 10% discount when liquidating
     uint256 private constant LIQUIDATION_PRECISION = 100; // liquidation precision is 100%
